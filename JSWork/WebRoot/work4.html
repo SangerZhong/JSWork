@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>work2.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=GBK">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <body>
+    <script language="JavaScript">
+    y=new Array();
+    y[1]=new Array();
+    y[2]=new Array();
+    y[3]=new Array();
+    y[4]=new Array();
+    y[5]=new Array();
+    y[6]=new Array();
+    y[7]=new Array();
+    y[8]=new Array();
+    y[9]=new Array();
+    y[10]=new Array();
+    for(i=1;i<=9;i++){
+    	y[i][1]=1;
+    	y[i][i]=1;
+    }
+    for(i=3;i<=9;i++){
+    	for(j=2;j<i;j++){
+    		y[i][j] = y[i-1][j-1]+y[i-1][j];
+    	}
+    }
+    for(i=1;i<=9;i++){
+    	for(j=1;j<=i;j++){
+    		document.write(y[i][j]+"\t");
+    	}
+    	document.write("<br>");
+    }
+    </script>
+  </body>
+</html>
